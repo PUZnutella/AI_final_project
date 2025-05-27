@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -37,8 +40,10 @@
     "tar": "^7.4.3",
     "web-streams-polyfill": "^3.3.3",
     "write-file-atomic": "^6.0.0",
-    "yallist": "^5.0.0"
+    "yallist": "^5.0.0",
+    "next": "^15.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "description": ""
 }
-
