@@ -18,6 +18,15 @@ interface Player {
   role_id: string;
 }
 
+interface GameRole {
+  id: string;
+  script_id: string;
+  name: string;
+  public_info: string;
+  secret: string;
+  mission: string;
+}
+
 export default function RoomPage() {
   const params = useParams();
   const router = useRouter();
@@ -28,7 +37,7 @@ export default function RoomPage() {
   const [loading, setLoading] = useState(true);
   const [players, setPlayers] = useState<Player[]>([]);
   const [gameStatus, setGameStatus] = useState<GameStatus>('waiting');
-  const [roles, setRoles] = useState<string[]>([]);
+  const [roles, setRoles] = useState<GameRole[]>([]);
   const [selectedRole, setSelectedRole] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
