@@ -27,6 +27,12 @@ interface GameRole {
   mission: string;
 }
 
+interface Evidence {
+  id: string;
+  name: string;
+  description: string;
+}
+
 export default function RoomPage() {
   const params = useParams();
   const router = useRouter();
@@ -39,6 +45,7 @@ export default function RoomPage() {
   const [gameStatus, setGameStatus] = useState<GameStatus>('waiting');
   const [roles, setRoles] = useState<GameRole[]>([]);
   const [selectedRole, setSelectedRole] = useState<string | null>(null);
+  const [evidence, setEvidence] = useState<Evidence[]>([]);
   const [error, setError] = useState<string | null>(null);
 
 
@@ -388,7 +395,7 @@ export default function RoomPage() {
         <GameContent
           roomId={room.id}
           playerId={player.id}
-          playerRole={player.role}
+          playerRole={player.role_id}
         />
       )}
 
